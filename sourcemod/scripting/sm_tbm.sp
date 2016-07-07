@@ -7,7 +7,7 @@
 #include <my_admin>
 #include <my_timers>
 
-#define PLUGIN_VERSION "0.9.3"
+#define PLUGIN_VERSION "0.9.4"
 
 #define DEBUG_PLUGIN
 
@@ -103,7 +103,7 @@ new String:g_PathDebug[PLATFORM_MAX_PATH];
 public OnPluginStart() {
 	LoadTranslations("tbm.phrases");
 
-	CreateConVar("sm_tbm_version", PLUGIN_VERSION, "Plugin version", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_NOTIFY|FCVAR_DONTRECORD);
+	CreateConVar("sm_tbm_version", PLUGIN_VERSION, "Plugin version", 0|FCVAR_SPONLY|FCVAR_NOTIFY|FCVAR_DONTRECORD);
 
 	AddConVar(g_ConVars[ECEnabled], ValueType_Bool, OnConVarChange,
 		CreateConVar("sm_tbm_enabled", "1", "0: Plugin OFF; 1: ON", FCVAR_PLUGIN, true, 0.0, true, 1.0));
