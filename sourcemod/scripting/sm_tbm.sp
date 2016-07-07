@@ -7,7 +7,7 @@
 #include <my_admin>
 #include <my_timers>
 
-#define PLUGIN_VERSION "0.9.5"
+#define PLUGIN_VERSION "0.9.6"
 
 #define DEBUG_PLUGIN
 
@@ -108,7 +108,7 @@ public OnPluginStart() {
 	AddConVar(g_ConVars[ECEnabled], ValueType_Bool, OnConVarChange,
 		CreateConVar("sm_tbm_enabled", "1", "0: Plugin OFF; 1: ON", 0, true, 0.0, true, 1.0));
 	AddConVar(g_ConVars[ECMaxSize], ValueType_Int, OnConVarChange,
-		CreateConVar("sm_tbm_max_size", "0", "x: Maksymalna liczba członków w drużynie; 0: Ustal automatycznie", FCVAR_PLUGIN, true, 0.0));
+		CreateConVar("sm_tbm_max_size", "0", "x: Maksymalna liczba członków w drużynie; 0: Ustal automatycznie", 0, true, 0.0));
 	AddConVar(g_ConVars[ECMaxDiff], ValueType_Int, OnConVarChange,
 		CreateConVar("sm_tbm_max_diff", "2", "x: Maksymalna różnica w liczbie członków w drużynie", FCVAR_PLUGIN, true, 1.0));
 	AddConVar(g_ConVars[ECMaxCond], ValueType_Int, OnConVarChange,
